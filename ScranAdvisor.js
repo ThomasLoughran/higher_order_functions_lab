@@ -16,4 +16,10 @@ ScranAdvisor.prototype.findAllNames = function(){
     return this.restaurants.map((restaurant) => restaurant.name);
 }
 
+ScranAdvisor.prototype.findByTown = function(town){
+    return this.restaurants.filter((restaurant) => {
+        return restaurant.location.town === town;
+    })
+}
+
 module.exports = ScranAdvisor;
